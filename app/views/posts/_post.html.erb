@@ -1,12 +1,12 @@
-<div id="<%= dom_id post %>">
+<div id="<%= dom_id post %>" class="">
+  <p class="font-bold inline-block">
+    Title: <%= post.title %>
+  </p>
   <p>
-    <strong>Title:</strong>
-    <%= post.title %>
+    Posted <%= time_tag post.created_at, "data-local": "time-ago" %>
   </p>
 
-  <p>
-    <strong>Content:</strong>
-    <%= post.content %>
+  <p class="font-bold">
+    Content: <%= post.content %>
   </p>
-
 </div>

@@ -1,14 +1,16 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Posts</h1>
+<h1 class="flex justify-center m-8">Posts</h1>
 
-<div id="posts">
+<div id="posts" class="grid grid-cols-3 gap-4 sm:grid-cols-1 md:grid-cols-3 max-w-screen-lg">
+  
   <% @posts.each do |post| %>
-    <%= render post %>
-    <p>
-      <%= link_to "Show this post", post %>
-    </p>
+  
+    <div class="bg-gray-100 p-8 m-8 shadow-sm">
+      <%= render post %>
+      <p class="my-3"><%= link_to "Show this post", post %></p>
+    </div>
   <% end %>
 </div>
 
-<%= link_to "New post", new_post_path %>
+<p class="flex justify-center"><%= link_to "New post", new_post_path %></p>
