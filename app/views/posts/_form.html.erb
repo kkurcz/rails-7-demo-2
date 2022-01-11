@@ -1,4 +1,4 @@
-<%= form_with(model: post) do |form| %>
+<%= form_with(model: post, html: {class: "space-y-5"}) do |form| %>
   <% if post.errors.any? %>
     <div style="color: red">
       <h2><%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:</h2>
@@ -9,19 +9,19 @@
         <% end %>
       </ul>
     </div>
-  <% end %>
+  <% end %> 
 
-  <div>
-    <%= form.label :title, style: "display: block" %>
-    <%= form.text_field :title %>
+  <div class="">
+    <%= form.label :title, class: "text-gray-500 block mb-1 font-bold" %>
+    <%= form.text_field :title, class: "w-full border-2 border-gray-200 p-3 rounded outline-none focus:border-yellow-500" %>
   </div>
 
   <div>
-    <%= form.label :content, style: "display: block" %>
-    <%= form.text_area :content %>
+    <%= form.label :content, class: "text-gray-500 block mb-1 font-bold" %>
+    <%= form.text_area :content, class: "min-h-20vh w-full border-2 border-gray-200 p-3 rounded outline-none focus:border-yellow-500" %>
   </div>
 
   <div>
-    <%= form.submit %>
+    <%= form.submit class: "block w-full bg-yellow-400 hover:bg-yellow-300 transition duration-300 text-yellow-800 py-4" %>
   </div>
 <% end %>

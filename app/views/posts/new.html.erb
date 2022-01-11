@@ -1,9 +1,13 @@
-<h1>New post</h1>
-
-<%= render "form", post: @post %>
-
-<br>
-
-<div>
-  <%= link_to "Back to posts", posts_path %>
+<div class="min-h-screen flex flex-row items-center justify-center bg-blue-400">
+  <div class="bg-white p-16 rounded shadow-2x1 w-2/3">
+    <%= link_to posts_path do %>
+      <div class="">
+        <%= image_tag "left-arrow", class: "inline-block h-4 w-4" %>
+        <div class=" inline-block">Posts</div>
+      </div>
+    <% end %>
+    <br/>
+    <h1 class="text-3xl font-bold mb-10 text-gray-800">New post</h1>
+    <%= render "form", post: @post %>
+  </div>
 </div>
