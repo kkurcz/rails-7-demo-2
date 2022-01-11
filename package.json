@@ -1,5 +1,9 @@
 {
   "devDependencies": {
     "tailwindcss": "^3.0.13"
+  },
+  "dependencies": {
+    "@rails/actiontext": "^7.0.1",
+    "trix": "^1.3.1"
   }
 }
