@@ -9,4 +9,12 @@
   <p class="font-bold">
     Content: <%= post.content %>
   </p>
+
+  <p>
+    <%= pluralize post.comments.count, "comment" %>
+  </p>
+
+  <p class="my-3"><%= link_to "Show this post", post %>
+  </p>
+
 </div>
